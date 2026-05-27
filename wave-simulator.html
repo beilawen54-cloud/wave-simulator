@@ -482,7 +482,7 @@ canvas.addEventListener('click', (e) => {
   const sigma = N / 30;
   for (let i = 1; i <= N; i++) {
     const dist = (i - clickI) / sigma;
-    const bump = params.amplitude * 0.7 * Math.exp(-dist * dist);
+    const bump = -params.amplitude * 0.7 * Math.exp(-dist * dist);
     uCurr[i] += bump;
     uPrev[i] += bump;
   }
